@@ -1,6 +1,6 @@
 package com.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,21 +13,27 @@ import com.java.LeapYearController;
 class LeapYearTest {
 
 	@Test
-	void testIs400LeapYear() {
+	void testDivisibleBy400() {
 		LeapYearController leapYearController = new LeapYearController();
 		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(400));
 	}
-	
+
 	@Test
-	void testIs2000LeapYear() {
+	void testDivisibleBy400_2() {
 		LeapYearController leapYearController = new LeapYearController();
 		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(2000));
 	}
-	
+
 	@Test
-	void testIs1700LeapYear() {
+	void testDivisbleBy100_NotBy400() {
 		LeapYearController leapYearController = new LeapYearController();
-		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(1700));
+		assertEquals(Boolean.FALSE, leapYearController.isLeapYear(1700));
+	}
+
+	@Test
+	void testDivisbleBy4_NotBy100() {
+		LeapYearController leapYearController = new LeapYearController();
+		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(2008));
 	}
 
 }
