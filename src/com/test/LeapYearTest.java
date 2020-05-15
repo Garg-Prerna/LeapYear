@@ -36,4 +36,10 @@ class LeapYearTest {
 		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(2008));
 	}
 
+	@Test
+	void testNotDivisbleBy4() {
+		LeapYearController leapYearController = new LeapYearController();
+		assertEquals(Boolean.FALSE, leapYearController.isLeapYear(2017));
+	}
+
 }

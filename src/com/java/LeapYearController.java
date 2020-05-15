@@ -19,6 +19,10 @@ public class LeapYearController {
 		if (year % 4 == 0 && year % 100 != 0) {
 			leapYear = true;
 		}
+		
+		if (year % 4 != 0) {
+			leapYear = false;
+		}
 		return leapYear;
 	}
 
