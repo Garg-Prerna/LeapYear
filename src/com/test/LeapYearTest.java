@@ -4,11 +4,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import com.java.LeapYearController;
+
+/**
+ * @author Prerna Garg
+ *
+ */
 class LeapYearTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testIs400LeapYear() {
+		LeapYearController leapYearController = new LeapYearController();
+		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(400));
 	}
 
 }
