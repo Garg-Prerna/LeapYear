@@ -17,5 +17,11 @@ class LeapYearTest {
 		LeapYearController leapYearController = new LeapYearController();
 		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(400));
 	}
+	
+	@Test
+	void testIs2000LeapYear() {
+		LeapYearController leapYearController = new LeapYearController();
+		assertEquals(Boolean.TRUE, leapYearController.isLeapYear(2000));
+	}
 
 }

@@ -6,9 +6,12 @@ package com.java;
  */
 public class LeapYearController {
 
-	public Boolean isLeapYear(int i) {
-
-		return true;
+	public boolean isLeapYear(int year) {
+		boolean leapYear = false;
+		if (year % 400 == 0) {
+			leapYear = true;
+		}
+		return leapYear;
 	}
 
 }
